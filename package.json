@@ -1,0 +1,24 @@
+{
+  "name": "graycode-backend",
+  "version": "1.0.0",
+  "description": "反射格雷码位置解码与采样跳变核验后端",
+  "main": "dist/src/api.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "npm run build && node dist/src/api.js",
+    "cli": "npm run build --silent && node dist/src/cli.js",
+    "demo": "npm run build --silent && node dist/src/cli.js demo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "graycode": "dist/src/cli.js"
+  }
+}
